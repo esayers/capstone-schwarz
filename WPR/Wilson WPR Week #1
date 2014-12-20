@@ -1,0 +1,14 @@
+Name:  	Ben Wilson
+WW: 	Dec. 13 – Dec. 19, 2014
+
+1.	Plan:  
+Research types of jamming techniques, software defined radios, and GPS receivers.
+
+2.	Actual Progress:  
+I spent around 5 hours this week reading articles online regarding GPS/cell phone jammers and reading from a book I purchased on GPS receivers. I read through the first three chapters of “A Software Defined GPS and Galileo Receiver” by Borre, Akos, et al. I spent several hours on Saturday working on a separate, but maybe related project trying to figure out how to program my Raspberry Pi to receive RF signals.
+I would like to get a better understanding of how to get a signal from an antenna into an FPGA and then what type of output we can expect from the FPGA.  Right now it seems like an FPGA is just a black box that performs magic and I’m having a difficult time wrapping my head around how the project will be broken up.
+
+3.	Plan for the upcoming week:  
+I plan on finding out what the deliverables will be for our Jan 6th meeting to present our initial findings. I will continue reading about software defined radios, GPS receivers, and methods of signal processing. I would also like to do a little bit of research on the FPGA board we will be using and its specs.
+
+4.	Miscellaneous Information:  

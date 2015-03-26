@@ -1,3 +1,5 @@
+% The following function takes the complex IQ data and computes the FFT
+% based on the number of points that are specified by the user.
 function fDomain = procFFT(IQraw, numPoint)
 fDomain = fft(IQraw,numPoint)/numPoint;
 temp = zeros(1,numPoint);

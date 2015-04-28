@@ -89,3 +89,259 @@ com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
 14:39:52 INFO  : ps7_post_config is completed.
 14:39:53 INFO  : Processor reset is completed for ps7_cortexa9_0
 16:29:13 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:28:15 INFO  : Processing command line option -hwspec /home/hirangren/Documents/Vivado/fft/fft.sdk/design_1_wrapper.hdf.
+16:28:15 INFO  : Restoring local repository preferences: 
+		 /home/hirangren/Documents/Vivado/FreeRTOS_Zynq_Vivado/sw/repo
+16:28:18 INFO  : Launching XSDB server: xsdb -s /opt/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+16:28:19 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+16:28:24 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:28:24 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:28:24 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:28:58 INFO  : FPGA configured successfully with bitstream "/home/hirangren/Documents/Vivado/fft/fft.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+16:29:10 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:29:10 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:29:10 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:29:10 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:31:33 INFO  : ps7_init is completed.
+16:31:33 INFO  : ps7_post_config is completed.
+16:31:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:33:34 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:33:34 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:33:34 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:33:34 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+16:33:46 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:33:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:51:18 INFO  : Processing command line option -hwspec /home/hirangren/Documents/Vivado/fft/fft.sdk/design_1_wrapper.hdf.
+09:51:19 INFO  : Restoring local repository preferences: 
+		 /home/hirangren/Documents/Vivado/FreeRTOS_Zynq_Vivado/sw/repo
+09:51:22 INFO  : Launching XSDB server: xsdb -s /opt/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+09:51:22 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+09:13:25 INFO  : Processing command line option -hwspec /home/hirangren/Documents/Vivado/fft/fft.sdk/design_1_wrapper.hdf.
+09:13:27 INFO  : Restoring local repository preferences: 
+		 /home/hirangren/Documents/Vivado/FreeRTOS_Zynq_Vivado/sw/repo
+09:13:28 WARN  : Unable to obtain port 2450 for use by XSDB Server, java.net.BindException: Address already in use
+09:13:28 INFO  : Launching XSDB server: xsdb -s /opt/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2457
+09:13:29 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+09:13:54 INFO  : FPGA configured successfully with bitstream "/home/hirangren/Documents/Vivado/fft/fft.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+09:13:57 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:13:58 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:13:58 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:14:25 INFO  : ps7_init is completed.
+09:14:25 INFO  : ps7_post_config is completed.
+09:14:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:14:25 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot OPEN File
+     - /home/hirangren/Downloads/XAPP1026/zc702_GigE/ready_for_download/image.mfs
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadDataFile(TM.java:702)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.downloadDataFiles(XilinxAppLaunchConfigurationDelegate.java:783)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:587)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:293)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+09:14:52 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:14:52 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:14:52 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:14:52 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:15:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:19:52 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:19:52 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:19:52 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:19:52 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:20:00 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+09:20:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:26:36 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:26:36 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:26:36 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:26:36 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:37:21 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:37:21 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:37:21 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:37:21 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:38:42 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:38:42 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:38:42 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:38:42 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+09:38:47 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+09:38:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:08:47 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:08:47 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:08:47 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:08:47 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:08:57 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:08:57 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:08:57 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:08:57 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:17:19 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:17:19 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:17:19 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:17:19 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:17:39 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+10:17:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:19:03 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:19:03 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:19:03 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:19:03 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:19:15 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+10:19:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:27:59 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:27:59 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:27:59 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:27:59 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:28:12 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+10:28:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:30:02 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:30:02 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:30:02 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:30:02 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:30:12 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:30:12 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:30:12 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:30:12 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+10:30:16 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+10:30:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:57:17 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+11:57:17 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+11:57:17 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+11:57:17 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+11:57:26 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:57:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:01:45 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+12:01:45 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+12:01:45 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+12:01:45 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+12:01:53 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:01:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:37:55 INFO  : FPGA configured successfully with bitstream "/home/hirangren/Documents/Vivado/fft/fft.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:51:33 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:51:33 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:51:33 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:51:33 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:51:44 INFO  : ps7_init is completed.
+17:51:44 INFO  : ps7_post_config is completed.
+17:51:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:52:04 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:52:04 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:52:04 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:52:04 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:52:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:52:42 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:52:43 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:52:43 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:52:43 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:53:24 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:53:24 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:53:24 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:53:24 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:53:45 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:53:45 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:53:45 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:53:45 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:54:01 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:54:01 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:54:01 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:54:01 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:54:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:55:00 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:55:00 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:55:00 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:55:00 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+17:56:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:22:44 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:22:44 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:22:44 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:22:44 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:23:44 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:23:44 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:23:44 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:23:44 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:23:55 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+18:23:55 ERROR : Timeout occured while waiting to get reply for command "xfpga_isconfigured -cable type xilinx_tcf url TCP:127.0.0.1:3121 "
+18:23:55 ERROR : Checking FPGA configuration failed..
+18:23:55 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: 
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:372)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:378)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:287)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:24:07 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:24:07 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:24:07 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:24:07 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+ [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+18:25:13 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not powered-on
+
+18:25:13 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not powered-on
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:372)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:378)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:287)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:25:32 INFO  : FPGA configured successfully with bitstream "/home/hirangren/Documents/Vivado/fft/fft.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:25:57 WARN  :  [Hsi 55-1559] Software Design already exists with Name /home/hirangren/Documents/Vivado/rtos/rtos.sdk/rtos_bsp/system.mss
+INFO: [Common 17-14] Message 'Hsi 55-1559' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+18:26:08 INFO  : ps7_init is completed.
+18:26:08 INFO  : ps7_post_config is completed.
+18:26:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:29:23 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:29:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:34:28 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:34:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:12:09 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+19:12:09 ERROR : Timeout occured while waiting to get reply for command "xdisconnect 352"
+19:13:09 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+19:13:09 ERROR : Timeout occured while waiting to get reply for command "set_cur_system_target"
+09:57:30 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

@@ -81,17 +81,18 @@ void process_echo_request(void *p)
 		}
 
 		/* handle request */
-		if ((nwrote = write(sd, fpass.ch, n)) < 0) {
+		/*if ((nwrote = write(sd, fpass.ch, n)) < 0) {
 			xil_printf("%s: ERROR responding to client echo request. received = %d, written = %d\r\n",
 					__FUNCTION__, n, nwrote);
 			xil_printf("Closing socket %d\r\n", sd);
+
 #ifndef OS_IS_FREERTOS
 			close(sd);
 			return;
 #else
 			break;
 #endif
-		}
+		}*/
 
 	}
 

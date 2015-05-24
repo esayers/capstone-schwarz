@@ -2,9 +2,9 @@
 # Webtalk v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
 # 
-# Start of session at: Tue Apr 21 16:29:10 2015
-# Process ID: 6586
-# Log file: /home/hirangren/Documents/Vivado/fft/fft.sdk/webtalk/webtalk.log
-# Journal file: /home/hirangren/Documents/Vivado/fft/fft.sdk/webtalk/webtalk.jou
+# Start of session at: Mon May 11 13:27:11 2015
+# Process ID: 6041
+# Log file: /home/hirangren/Documents/Git/capstone-schwarz/hw/fft/fft.sdk/webtalk/webtalk.log
+# Journal file: /home/hirangren/Documents/Git/capstone-schwarz/hw/fft/fft.sdk/webtalk/webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

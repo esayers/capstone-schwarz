@@ -1,0 +1,20 @@
+#ifndef JAMDETECT_H
+#define JAMDETECT_H
+
+#include <complex.h>
+#include <math.h>
+
+#define PI 3.14159265358979323846
+
+typedef float complex cplx;
+
+typedef struct win_peak {
+    unsigned int index;
+    double value;
+} win_peak;
+
+void _fft(cplx *, cplx *, int, int);
+void fft(cplx *, int);
+win_peak get_peak(cplx *, int);
+
+#endif

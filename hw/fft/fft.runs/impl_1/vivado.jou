@@ -2,9 +2,9 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 16:47:07 MST 2014
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Tue Apr 21 14:32:17 2015
-# Process ID: 18291
-# Log file: /home/hirangren/Documents/Vivado/fft/fft.runs/impl_1/design_1_wrapper.vdi
-# Journal file: /home/hirangren/Documents/Vivado/fft/fft.runs/impl_1/vivado.jou
+# Start of session at: Mon May 11 17:14:44 2015
+# Process ID: 11051
+# Log file: /home/hirangren/Documents/Git/capstone-schwarz/hw/fft/fft.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /home/hirangren/Documents/Git/capstone-schwarz/hw/fft/fft.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

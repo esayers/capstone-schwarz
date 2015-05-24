@@ -32,6 +32,16 @@
 #include "platform_gpio.h"
 #endif
 
+#include <math.h>
+#include <complex.h>
+#include "jamdetect.h"
+#include "prot_malloc.h"
+
+#define HEAD_SIZE 3
+#define WIN_SIZE 64
+#define UNION_SIZE (WIN_SIZE * 2 + HEAD_SIZE)
+#define RECV_BUF_SIZE (UNION_SIZE * 4)
+
 u16_t echo_port = 7;
 
 void print_echo_app_header()
@@ -46,13 +56,17 @@ void print_echo_app_header()
 void process_echo_request(void *p)
 {
 	int sd = (int)p;
-	int RECV_BUF_SIZE = 256;
-	char recv_buf[RECV_BUF_SIZE];
-	int n, nwrote, i;
+	int n, i, nsamples;
+	float sample_rate, center_freq;
+	static unsigned int count;
+	win_peak peak;
+	jam_info info;
+	cplx *buf = prot_mem_malloc(sizeof(cplx) * WIN_SIZE);
 
 	union Fpass{
-		float fl[64];
-		char ch[256];
+		int i[UNION_SIZE];
+		float fl[UNION_SIZE];
+		char ch[RECV_BUF_SIZE];
 	} fpass;
 
 	while (1) {
@@ -68,17 +82,40 @@ void process_echo_request(void *p)
 		}
 
 		/* break if the recved message = "quit" */
-		if (!strncmp(recv_buf, "quit", 4))
+		if (!strncmp(fpass.ch, "quit", 4))
 			break;
 
 		/* break if client closed connection */
 		if (n <= 0)
 			break;
 
-		for (i = 0; i < 64; ++i)
+		/* Rearrange from network order */
+		for (i = 0; i < UNION_SIZE; ++i)
 		{
-			printf("recieved: %f\r\n", fpass.fl[i]);
+			fpass.i[i] = ntohl(fpass.i[i]);
 		}
+
+		/* Get info from header */
+		nsamples = fpass.i[0];
+		sample_rate = fpass.fl[1];
+		center_freq = fpass.fl[2];
+
+		/* Limit nsamples to window size */
+		if (nsamples > WIN_SIZE)
+			nsamples = WIN_SIZE;
+
+		uninter(&fpass.fl[3], buf, nsamples);
+
+		/* fft and get peak */
+		fft(buf, nsamples);
+		peak = get_peak(buf, nsamples, sample_rate, center_freq);
+		info = process_signal(peak, sample_rate);
+
+		if (info.valid)
+		{
+			printf("Time: %f Bandwidth: %f, Chirp Rate: %f\r\n", info.time, info.bandwidth, info.chirprate);
+		}
+
 
 		/* handle request */
 		/*if ((nwrote = write(sd, fpass.ch, n)) < 0) {
@@ -86,17 +123,19 @@ void process_echo_request(void *p)
 					__FUNCTION__, n, nwrote);
 			xil_printf("Closing socket %d\r\n", sd);
 
+
 #ifndef OS_IS_FREERTOS
 			close(sd);
 			return;
 #else
 			break;
 #endif
-		}*/
+		}
+*/
 
 	}
-
 	/* close connection */
+	prot_mem_free(buf);
 	close(sd);
 #ifdef OS_IS_FREERTOS
 	vTaskDelete(NULL);

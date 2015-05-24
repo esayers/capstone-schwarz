@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
-//Date        : Tue Apr 21 14:21:53 2015
+//Date        : Mon May 11 17:01:40 2015
 //Host        : hirangren-Parallels-Virtual-Platform running 64-bit Ubuntu 14.04.2 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -214,7 +214,7 @@ design_1_axi_dma_0_0 axi_dma_0
        (.axi_resetn(proc_sys_reset_0_peripheral_aresetn),
         .m_axi_mm2s_aclk(processing_system7_0_FCLK_CLK0),
         .m_axi_mm2s_arready(GND_1),
-        .m_axi_mm2s_rdata({GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1}),
+        .m_axi_mm2s_rdata({GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1}),
         .m_axi_mm2s_rlast(GND_1),
         .m_axi_mm2s_rresp({GND_1,GND_1}),
         .m_axi_mm2s_rvalid(GND_1),
@@ -223,17 +223,6 @@ design_1_axi_dma_0_0 axi_dma_0
         .m_axi_s2mm_bresp({GND_1,GND_1}),
         .m_axi_s2mm_bvalid(GND_1),
         .m_axi_s2mm_wready(GND_1),
-        .m_axi_sg_aclk(processing_system7_0_FCLK_CLK0),
-        .m_axi_sg_arready(GND_1),
-        .m_axi_sg_awready(GND_1),
-        .m_axi_sg_bresp({GND_1,GND_1}),
-        .m_axi_sg_bvalid(GND_1),
-        .m_axi_sg_rdata({GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1}),
-        .m_axi_sg_rlast(GND_1),
-        .m_axi_sg_rresp({GND_1,GND_1}),
-        .m_axi_sg_rvalid(GND_1),
-        .m_axi_sg_wready(GND_1),
-        .m_axis_mm2s_cntrl_tready(GND_1),
         .m_axis_mm2s_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
         .m_axis_mm2s_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),
         .m_axis_mm2s_tready(axi_dma_0_M_AXIS_MM2S_TREADY),
@@ -257,10 +246,6 @@ design_1_axi_dma_0_0 axi_dma_0
         .s_axi_lite_wdata(processing_system7_0_axi_periph_M03_AXI_WDATA),
         .s_axi_lite_wready(processing_system7_0_axi_periph_M03_AXI_WREADY),
         .s_axi_lite_wvalid(processing_system7_0_axi_periph_M03_AXI_WVALID),
-        .s_axis_s2mm_sts_tdata({GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1}),
-        .s_axis_s2mm_sts_tkeep({VCC_1,VCC_1,VCC_1,VCC_1}),
-        .s_axis_s2mm_sts_tlast(GND_1),
-        .s_axis_s2mm_sts_tvalid(GND_1),
         .s_axis_s2mm_tdata(xfft_0_M_AXIS_DATA_TDATA),
         .s_axis_s2mm_tkeep({VCC_1,VCC_1,VCC_1,VCC_1}),
         .s_axis_s2mm_tlast(xfft_0_M_AXIS_DATA_TLAST),
@@ -522,13 +507,13 @@ design_1_processing_system7_0_axi_periph_0 processing_system7_0_axi_periph
         .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
-design_1_xfft_0_0 xfft_0
+design_1_xfft_0_2 xfft_0
        (.aclk(processing_system7_0_FCLK_CLK0),
         .m_axis_data_tdata(xfft_0_M_AXIS_DATA_TDATA),
         .m_axis_data_tlast(xfft_0_M_AXIS_DATA_TLAST),
         .m_axis_data_tready(xfft_0_M_AXIS_DATA_TREADY),
         .m_axis_data_tvalid(xfft_0_M_AXIS_DATA_TVALID),
-        .s_axis_config_tdata({GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1}),
+        .s_axis_config_tdata({GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1}),
         .s_axis_config_tvalid(xlconstant_0_dout),
         .s_axis_data_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
         .s_axis_data_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),

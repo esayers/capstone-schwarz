@@ -1,172 +1,873 @@
-17:53:28 **** Incremental Build of configuration Debug for project test ****
+15:40:20 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.
-17:54:50 **** Incremental Build of configuration Debug for project test ****
+15:40:35 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.
-17:56:13 **** Incremental Build of configuration Debug for project test ****
+15:41:36 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.
-18:22:19 **** Auto Build of configuration Debug for project test ****
+15:53:36 **** Auto Build of configuration Debug for project test ****
 make all 
 Building file: ../src/echo.c
 Invoking: ARM gcc compiler
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
 ../src/echo.c: In function 'process_echo_request':
-../src/echo.c:78:3: warning: implicit declaration of function 'xil_print' [-Wimplicit-function-declaration]
-   xil_print("recieved: %s\r\n", fpass.ch);
+../src/echo.c:123:4: warning: format '%u' expects a matching 'unsigned int' argument [-Wformat=]
+    printf("Count: %ud\r\n");
+    ^
+../src/echo.c:123:4: warning: format '%u' expects a matching 'unsigned int' argument [-Wformat=]
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193172	   3116	10973388	11169676	 aa6f8c	test.elf
+Finished building: test.elf.size
+ 
+15:54:16 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193172	   3116	10973388	11169676	 aa6f8c	test.elf
+Finished building: test.elf.size
+ 
+15:54:32 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:02:48 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:03:19 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:12:40 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:15:43 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:36:00 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:42:49 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:47:17 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:47:49 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:49:46 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:51:45 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:63:7: warning: variable 'buf' set but not used [-Wunused-but-set-variable]
+  cplx buf[WIN_SIZE];
+       ^
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193004	   3116	10973388	11169508	 aa6ee4	test.elf
+Finished building: test.elf.size
+ 
+16:52:20 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:55:58 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: variable 'peak' set but not used [-Wunused-but-set-variable]
+  win_peak peak;
+           ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193068	   3116	10973388	11169572	 aa6f24	test.elf
+Finished building: test.elf.size
+ 
+16:56:06 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:57:55 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193060	   3116	10973388	11169564	 aa6f1c	test.elf
+Finished building: test.elf.size
+ 
+17:01:09 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+17:05:35 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+17:13:56 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+17:20:08 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:63:7: warning: variable 'buf' set but not used [-Wunused-but-set-variable]
+  cplx buf[WIN_SIZE];
+       ^
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192996	   3116	10973388	11169500	 aa6edc	test.elf
+Finished building: test.elf.size
+ 
+17:20:41 **** Incremental Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:63:7: warning: variable 'buf' set but not used [-Wunused-but-set-variable]
+  cplx buf[WIN_SIZE];
+       ^
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192996	   3116	10973388	11169500	 aa6edc	test.elf
+Finished building: test.elf.size
+ 
+17:21:22 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+17:23:48 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192996	   3116	10973388	11169500	 aa6edc	test.elf
+Finished building: test.elf.size
+ 
+17:23:57 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+17:32:12 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+17:32:52 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+17:34:43 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:63:7: warning: variable 'buf' set but not used [-Wunused-but-set-variable]
+  cplx buf[WIN_SIZE];
+       ^
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192996	   3116	10973388	11169500	 aa6edc	test.elf
+Finished building: test.elf.size
+ 
+17:34:52 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+17:35:18 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+17:48:26 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:19:10: warning: unused variable 'temp' [-Wunused-variable]
+     cplx temp[n];
+          ^
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192612	   3116	10973388	11169116	 aa6d5c	test.elf
+Finished building: test.elf.size
+ 
+17:48:42 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+17:49:17 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:25:9: warning: "/*" within comment [-Wcomment]
+         /* Flip the data across the y axis */
+ ^
+../src/jamdetect.c:29:6: error: expected expression before '/' token
+     */
+      ^
+make: *** [src/jamdetect.o] Error 1
+17:49:26 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:25:9: warning: "/*" within comment [-Wcomment]
+         /* Flip the data across the y axis */
+ ^
+../src/jamdetect.c:19:10: warning: unused variable 'temp' [-Wunused-variable]
+     cplx temp[n];
+          ^
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192612	   3116	10973388	11169116	 aa6d5c	test.elf
+Finished building: test.elf.size
+ 
+17:49:34 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192612	   3116	10973388	11169116	 aa6d5c	test.elf
+Finished building: test.elf.size
+ 
+17:49:57 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+13:39:28 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+In file included from ../src/echo.c:37:0:
+../src/jamdetect.h:29:1: warning: data definition has no type or storage class [enabled by default]
+ uninter(float *, cplx *);
+ ^
+../src/jamdetect.h:29:1: warning: type defaults to 'int' in declaration of 'uninter' [-Wimplicit-int]
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+In file included from ../src/jamdetect.c:1:0:
+../src/jamdetect.h:29:1: warning: data definition has no type or storage class [enabled by default]
+ uninter(float *, cplx *);
+ ^
+../src/jamdetect.h:29:1: warning: type defaults to 'int' in declaration of 'uninter' [-Wimplicit-int]
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:25:9: warning: "/*" within comment [-Wcomment]
+         /* Flip the data across the y axis */
+ ^
+../src/jamdetect.c:19:10: warning: unused variable 'temp' [-Wunused-variable]
+     cplx temp[n];
+          ^
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192612	   3116	10973388	11169116	 aa6d5c	test.elf
+Finished building: test.elf.size
+ 
+13:40:14 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+In file included from ../src/echo.c:37:0:
+../src/jamdetect.h:29:1: warning: data definition has no type or storage class [enabled by default]
+ uninter(float *, cplx *, int);
+ ^
+../src/jamdetect.h:29:1: warning: type defaults to 'int' in declaration of 'uninter' [-Wimplicit-int]
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+In file included from ../src/jamdetect.c:1:0:
+../src/jamdetect.h:29:1: warning: data definition has no type or storage class [enabled by default]
+ uninter(float *, cplx *, int);
+ ^
+../src/jamdetect.h:29:1: warning: type defaults to 'int' in declaration of 'uninter' [-Wimplicit-int]
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:25:9: warning: "/*" within comment [-Wcomment]
+         /* Flip the data across the y axis */
+ ^
+../src/jamdetect.c:19:10: warning: unused variable 'temp' [-Wunused-variable]
+     cplx temp[n];
+          ^
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192612	   3116	10973388	11169116	 aa6d5c	test.elf
+Finished building: test.elf.size
+ 
+13:40:37 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:124:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:25:9: warning: "/*" within comment [-Wcomment]
+         /* Flip the data across the y axis */
+ ^
+../src/jamdetect.c:19:10: warning: unused variable 'temp' [-Wunused-variable]
+     cplx temp[n];
+          ^
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192612	   3116	10973388	11169116	 aa6d5c	test.elf
+Finished building: test.elf.size
+ 
+13:57:26 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:25:9: warning: "/*" within comment [-Wcomment]
+         /* Flip the data across the y axis */
+ ^
+../src/jamdetect.c:19:10: warning: unused variable 'temp' [-Wunused-variable]
+     cplx temp[n];
+          ^
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 192996	   3116	10973388	11169500	 aa6edc	test.elf
+Finished building: test.elf.size
+ 
+13:58:25 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193380	   3116	10973388	11169884	 aa705c	test.elf
+Finished building: test.elf.size
+ 
+14:00:14 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:108:3: error: expected ';' before 'fft'
+   fft(buf, nsamples);
    ^
-../src/echo.c:51:17: warning: unused variable 'i' [-Wunused-variable]
-  int n, nwrote, i;
-                 ^
-Finished building: ../src/echo.c
- 
-Building target: test.elf
-Invoking: ARM gcc linker
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-./src/echo.o: In function `process_echo_request':
-/home/hirangren/Documents/Vivado/fft/fft.sdk/test/Debug/../src/echo.c:78: undefined reference to `xil_print'
-collect2: error: ld returned 1 exit status
-make: *** [test.elf] Error 1
-18:22:31 **** Auto Build of configuration Debug for project test ****
+../src/echo.c:119:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:119:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+make: *** [src/echo.o] Error 1
+14:00:25 **** Auto Build of configuration Debug for project test ****
 make all 
 Building file: ../src/echo.c
 Invoking: ARM gcc compiler
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
 ../src/echo.c: In function 'process_echo_request':
-../src/echo.c:51:17: warning: unused variable 'i' [-Wunused-variable]
-  int n, nwrote, i;
-                 ^
+../src/echo.c:120:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:120:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
 Finished building: ../src/echo.c
  
 Building target: test.elf
 Invoking: ARM gcc linker
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
 Finished building target: test.elf
  
 Invoking: ARM Print Size
 arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 176256	   3116	10965180	11144552	 aa0d68	test.elf
+ 193252	   3116	10973388	11169756	 aa6fdc	test.elf
 Finished building: test.elf.size
  
-18:22:42 **** Auto Build of configuration Debug for project test ****
+14:00:51 **** Incremental Build of configuration Debug for project test ****
 make all 
-Building file: ../src/echo.c
+make: Nothing to be done for `all'.
+14:10:03 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
 Invoking: ARM gcc compiler
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
-Finished building: ../src/echo.c
- 
-Building target: test.elf
-Invoking: ARM gcc linker
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: test.elf
- 
-Invoking: ARM Print Size
-arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 176256	   3116	10965180	11144552	 aa0d68	test.elf
-Finished building: test.elf.size
- 
-18:22:54 **** Incremental Build of configuration Debug for project test ****
-make all 
-make: Nothing to be done for `all'.
-18:23:51 **** Incremental Build of configuration Debug for project test ****
-make all 
-make: Nothing to be done for `all'.
-18:24:17 **** Incremental Build of configuration Debug for project test ****
-make all 
-make: Nothing to be done for `all'.
-18:26:05 **** Incremental Build of configuration Debug for project test ****
-make all 
-make: Nothing to be done for `all'.
-18:29:14 **** Auto Build of configuration Debug for project test ****
-make all 
-Building file: ../src/echo.c
-Invoking: ARM gcc compiler
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
-Finished building: ../src/echo.c
- 
-Building target: test.elf
-Invoking: ARM gcc linker
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: test.elf
- 
-Invoking: ARM Print Size
-arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 176256	   3116	10965180	11144552	 aa0d68	test.elf
-Finished building: test.elf.size
- 
-18:29:23 **** Incremental Build of configuration Debug for project test ****
-make all 
-make: Nothing to be done for `all'.
-18:32:57 **** Auto Build of configuration Debug for project test ****
-make all 
-Building file: ../src/echo.c
-Invoking: ARM gcc compiler
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
-Finished building: ../src/echo.c
- 
-Building target: test.elf
-Invoking: ARM gcc linker
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: test.elf
- 
-Invoking: ARM Print Size
-arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 176256	   3116	10965180	11144552	 aa0d68	test.elf
-Finished building: test.elf.size
- 
-18:34:09 **** Auto Build of configuration Debug for project test ****
-make all 
-Building file: ../src/echo.c
-Invoking: ARM gcc compiler
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
-Finished building: ../src/echo.c
- 
-Building target: test.elf
-Invoking: ARM gcc linker
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: test.elf
- 
-Invoking: ARM Print Size
-arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 176320	   3116	10965180	11144616	 aa0da8	test.elf
-Finished building: test.elf.size
- 
-18:34:27 **** Incremental Build of configuration Debug for project test ****
-make all 
-make: Nothing to be done for `all'.
-13:03:01 **** Incremental Build of configuration Debug for project test ****
-make all 
-make: Nothing to be done for `all'.
-13:06:50 **** Auto Build of configuration Debug for project test ****
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c:32:10: error: conflicting types for 'get_peak'
+ win_peak get_peak(cplx buf[], int nsamples, float sample_rate, float center_freq)
+          ^
+In file included from ../src/jamdetect.c:1:0:
+../src/jamdetect.h:27:10: note: previous declaration of 'get_peak' was here
+ win_peak get_peak(cplx *, int, double, double);
+          ^
+../src/jamdetect.c:55:10: error: conflicting types for 'process_signal'
+ jam_info process_signal(win_peak peak, float sample_rate)
+          ^
+In file included from ../src/jamdetect.c:1:0:
+../src/jamdetect.h:28:10: note: previous declaration of 'process_signal' was here
+ jam_info process_signal(win_peak, double);
+          ^
+make: *** [src/jamdetect.o] Error 1
+14:10:21 **** Auto Build of configuration Debug for project test ****
 make all 
 Building file: ../src/echo.c
 Invoking: ARM gcc compiler
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
 ../src/echo.c: In function 'process_echo_request':
-../src/echo.c:51:9: warning: unused variable 'nwrote' [-Wunused-variable]
-  int n, nwrote, i;
-         ^
+../src/echo.c:120:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:120:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c:55:10: error: conflicting types for 'process_signal'
+ jam_info process_signal(win_peak peak, float sample_rate)
+          ^
+In file included from ../src/jamdetect.c:1:0:
+../src/jamdetect.h:28:10: note: previous declaration of 'process_signal' was here
+ jam_info process_signal(win_peak, double);
+          ^
+make: *** [src/jamdetect.o] Error 1
+14:10:43 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:120:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+    printf("Count: %f\r\n", count);
+    ^
+../src/echo.c:120:4: warning: format '%f' expects argument of type 'double', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193316	   3116	10973388	11169820	 aa701c	test.elf
+Finished building: test.elf.size
+ 
+14:11:36 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193316	   3116	10973388	11169820	 aa701c	test.elf
+Finished building: test.elf.size
+ 
+14:11:55 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+14:12:27 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+14:16:13 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
 In file included from ../src/echo.c:23:0:
 ../src/echo.c: At top level:
 ../../rtos_bsp/ps7_cortexa9_0/include/lwip/sockets.h:365:31: warning: data definition has no type or storage class [enabled by default]
  #define close(s)              lwip_close(s)
                                ^
-../src/echo.c:100:2: note: in expansion of macro 'close'
+../src/echo.c:141:2: note: in expansion of macro 'close'
   close(sd);
   ^
 ../../rtos_bsp/ps7_cortexa9_0/include/lwip/sockets.h:365:31: warning: type defaults to 'int' in declaration of 'lwip_close' [-Wimplicit-int]
  #define close(s)              lwip_close(s)
                                ^
-../src/echo.c:100:2: note: in expansion of macro 'close'
+../src/echo.c:141:2: note: in expansion of macro 'close'
   close(sd);
   ^
-../src/echo.c:100:2: warning: parameter names (without types) in function declaration [enabled by default]
+../src/echo.c:141:2: warning: parameter names (without types) in function declaration [enabled by default]
 In file included from /opt/Xilinx/SDK/2014.4/gnu/arm/lin/arm-xilinx-eabi/include/stdlib.h:21:0,
                  from ../../rtos_bsp/ps7_cortexa9_0/include/arch/cc.h:56,
                  from ../../rtos_bsp/ps7_cortexa9_0/include/lwip/arch.h:43,
@@ -174,38 +875,510 @@ In file included from /opt/Xilinx/SDK/2014.4/gnu/arm/lin/arm-xilinx-eabi/include
                  from ../../rtos_bsp/ps7_cortexa9_0/include/lwip/opt.h:46,
                  from ../../rtos_bsp/ps7_cortexa9_0/include/lwip/inet.h:35,
                  from ../src/echo.c:22:
-../src/echo.c:102:14: error: expected declaration specifiers or '...' before '(' token
+../src/echo.c:143:14: error: expected declaration specifiers or '...' before '(' token
   vTaskDelete(NULL);
               ^
-../src/echo.c:104:1: error: expected identifier or '(' before '}' token
+../src/echo.c:145:1: error: expected identifier or '(' before '}' token
  }
  ^
 make: *** [src/echo.o] Error 1
-13:07:32 **** Auto Build of configuration Debug for project test ****
+14:17:48 **** Auto Build of configuration Debug for project test ****
 make all 
 Building file: ../src/echo.c
 Invoking: ARM gcc compiler
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
 ../src/echo.c: In function 'process_echo_request':
-../src/echo.c:51:9: warning: unused variable 'nwrote' [-Wunused-variable]
-  int n, nwrote, i;
-         ^
+../src/echo.c:175:1: error: expected declaration or statement at end of input
+ }
+ ^
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+make: *** [src/echo.o] Error 1
+14:18:23 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
 Finished building: ../src/echo.c
  
 Building target: test.elf
 Invoking: ARM gcc linker
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
 Finished building target: test.elf
  
 Invoking: ARM Print Size
 arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 176096	   3116	10965180	11144392	 aa0cc8	test.elf
+ 193316	   3116	10973388	11169820	 aa701c	test.elf
 Finished building: test.elf.size
  
-13:07:44 **** Incremental Build of configuration Debug for project test ****
+14:18:59 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193252	   3116	10973388	11169756	 aa6fdc	test.elf
+Finished building: test.elf.size
+ 
+14:19:12 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.
-13:50:39 **** Incremental Build of configuration Debug for project test ****
+14:20:01 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+14:24:01 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193252	   3116	10973388	11169756	 aa6fdc	test.elf
+Finished building: test.elf.size
+ 
+14:24:06 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+14:30:58 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:22:5: warning: implicit declaration of function 'prot_mem_malloc' [-Wimplicit-function-declaration]
+     temp = prot_mem_malloc(sizeof(cplx) * n);
+     ^
+../src/jamdetect.c:22:10: warning: assignment makes pointer from integer without a cast [enabled by default]
+     temp = prot_mem_malloc(sizeof(cplx) * n);
+          ^
+../src/jamdetect.c:23:9: warning: assignment makes pointer from integer without a cast [enabled by default]
+     out = prot_mem_malloc(sizeof(cplx) * n);
+         ^
+../src/jamdetect.c:35:5: warning: implicit declaration of function 'prot_mem_free' [-Wimplicit-function-declaration]
+     prot_mem_free(temp);
+     ^
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193188	   3116	10973388	11169692	 aa6f9c	test.elf
+Finished building: test.elf.size
+ 
+14:38:08 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:20:5: warning: implicit declaration of function 'prot_mem_malloc' [-Wimplicit-function-declaration]
+     cplx *temp = prot_mem_malloc(sizeof(cplx) * n);
+     ^
+../src/jamdetect.c:20:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+     cplx *temp = prot_mem_malloc(sizeof(cplx) * n);
+                  ^
+../src/jamdetect.c:21:17: warning: initialization makes pointer from integer without a cast [enabled by default]
+     cplx *out = prot_mem_malloc(sizeof(cplx) * n);
+                 ^
+../src/jamdetect.c:33:5: warning: implicit declaration of function 'prot_mem_free' [-Wimplicit-function-declaration]
+     prot_mem_free(temp);
+     ^
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193188	   3116	10973388	11169692	 aa6f9c	test.elf
+Finished building: test.elf.size
+ 
+14:38:57 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:20:5: warning: implicit declaration of function 'prot_mem_malloc' [-Wimplicit-function-declaration]
+     cplx *temp = prot_mem_malloc(sizeof(cplx) * n);
+     ^
+../src/jamdetect.c:20:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+     cplx *temp = prot_mem_malloc(sizeof(cplx) * n);
+                  ^
+../src/jamdetect.c:21:17: warning: initialization makes pointer from integer without a cast [enabled by default]
+     cplx *out = prot_mem_malloc(sizeof(cplx) * n);
+                 ^
+../src/jamdetect.c:33:5: warning: implicit declaration of function 'prot_mem_free' [-Wimplicit-function-declaration]
+     prot_mem_free(temp);
+     ^
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193188	   3116	10973388	11169692	 aa6f9c	test.elf
+Finished building: test.elf.size
+ 
+14:41:33 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c: In function 'fft':
+../src/jamdetect.c:20:5: warning: implicit declaration of function 'prot_mem_malloc' [-Wimplicit-function-declaration]
+     cplx *temp = (cplx *)prot_mem_malloc(sizeof(cplx) * n);
+     ^
+../src/jamdetect.c:33:5: warning: implicit declaration of function 'prot_mem_free' [-Wimplicit-function-declaration]
+     prot_mem_free(temp);
+     ^
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193188	   3116	10973388	11169692	 aa6f9c	test.elf
+Finished building: test.elf.size
+ 
+14:42:19 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:62:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:61:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:59:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:59:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193188	   3116	10973388	11169692	 aa6f9c	test.elf
+Finished building: test.elf.size
+ 
+14:42:29 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193188	   3116	10973388	11169692	 aa6f9c	test.elf
+Finished building: test.elf.size
+ 
+14:42:43 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193188	   3116	10973388	11169692	 aa6f9c	test.elf
+Finished building: test.elf.size
+ 
+14:45:19 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:63:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:62:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:60:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:60:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193188	   3116	10973388	11169692	 aa6f9c	test.elf
+Finished building: test.elf.size
+ 
+14:45:36 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+14:46:07 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:63:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:62:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:60:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:60:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193188	   3116	10973388	11169692	 aa6f9c	test.elf
+Finished building: test.elf.size
+ 
+14:46:12 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+14:47:55 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:63:11: warning: unused variable 'info' [-Wunused-variable]
+  jam_info info;
+           ^
+../src/echo.c:62:11: warning: unused variable 'peak' [-Wunused-variable]
+  win_peak peak;
+           ^
+../src/echo.c:60:21: warning: variable 'center_freq' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+                     ^
+../src/echo.c:60:8: warning: variable 'sample_rate' set but not used [-Wunused-but-set-variable]
+  float sample_rate, center_freq;
+        ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193188	   3116	10973388	11169692	 aa6f9c	test.elf
+Finished building: test.elf.size
+ 
+14:47:58 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+14:55:31 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+../src/jamdetect.c: In function 'process_signal':
+../src/jamdetect.c:65:10: error: expected identifier or '(' before 'cplx'
+  static *cplx;
+          ^
+../src/jamdetect.c:84:3: error: expected expression before 'cplx'
+   cplx = prot_mem_malloc(sizeof(cplx) * BUFFER_LEN);
+   ^
+../src/jamdetect.c:86:2: error: 'freq_vs_time' undeclared (first use in this function)
+  freq_vs_time[index++] = peak.freq + 0 * I;
+  ^
+../src/jamdetect.c:86:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/jamdetect.c:113:17: error: expected expression before 'cplx'
+   prot_mem_free(cplx);
+                 ^
+make: *** [src/jamdetect.o] Error 1
+14:56:28 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/jamdetect.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jamdetect.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/jamdetect.d" -MT"src/jamdetect.d" -o "src/jamdetect.o" "../src/jamdetect.c"
+Finished building: ../src/jamdetect.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193316	   3116	10965196	11161628	 aa501c	test.elf
+Finished building: test.elf.size
+ 
+14:57:46 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193492	   3116	10965196	11161804	 aa50cc	test.elf
+Finished building: test.elf.size
+ 
+14:57:58 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+15:02:05 **** Auto Build of configuration Debug for project test ****
+make all 
+Building file: ../src/echo.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../rtos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:61:22: warning: unused variable 'count' [-Wunused-variable]
+  static unsigned int count;
+                      ^
+Finished building: ../src/echo.c
+ 
+Building target: test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rtos_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/dispatch.o ./src/echo.o ./src/jamdetect.o ./src/main.o ./src/platform.o ./src/platform_fs.o ./src/platform_gpio.o ./src/prot_malloc.o ./src/udpsend.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 193348	   3116	10965196	11161660	 aa503c	test.elf
+Finished building: test.elf.size
+ 
+15:02:15 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.

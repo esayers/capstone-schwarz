@@ -2,19 +2,13 @@
 # Client for sending data to FPGA
 
 import socket
-import ctypes
-import os
 import tarfile
 import xml.etree.ElementTree as ET
 import sys
 import tempfile
 import struct
 import shutil
-
-# Union class for packing data
-class Pack(ctypes.Union):
-    _fields_ = [("fl", ctypes.c_float * 65),
-                ("ch", ctypes.c_char * 4 * 65)]
+import itertools
 
 # Error if there is the wrong number of arguments
 if len(sys.argv) != 2:
@@ -44,19 +38,20 @@ root = tree.getroot()
 samples = root.find('Samples').text
 dataname = root.find('DataFilename').text
 clock = root.find('Clock').text
+cfreq = root.find('UserData').find('RohdeSchwarz').find('SpectrumAnalyzer').find('CenterFrequency').text
 
-#s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#s.connect(('192.168.1.10', 7))
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(('192.168.1.10', 7))
+
 
 with open("tmp/" + dataname, "rb") as df:
-    fl = df.read(256)
-    while len(fl) == 256:
+    fl = df.read(512)
+    while len(fl) == 512:
+        unpacked = struct.unpack('f'*128, fl)
         sendBytes = bytes()
-        unpacked = struct.unpack('f'*64, fl)
-        sendBytes = sendBytes.join(struct.pack('!f', val) for val in unpacked)
-        print b
-        fl = df.read(256)
-
+        sendBytes = sendBytes.join(itertools.chain(struct.pack('!iff', int(64), float(clock), float(cfreq)), (struct.pack('!f', val) for val in unpacked)))
+        s.send(sendBytes)
+        fl = df.read(512)
 
 shutil.rmtree("tmp")
 #p = Pack()

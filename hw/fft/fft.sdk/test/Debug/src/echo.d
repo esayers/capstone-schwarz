@@ -33,7 +33,8 @@ src/echo.o src/echo.d: ../src/echo.c \
  ../../rtos_bsp/ps7_cortexa9_0/include/timers.h \
  ../../rtos_bsp/ps7_cortexa9_0/include/task.h ../src/config_apps.h \
  ../../rtos_bsp/ps7_cortexa9_0/include/xil_printf.h \
- ../src/platform_gpio.h
+ ../src/platform_gpio.h ../src/jamdetect.h ../src/prot_malloc.h \
+ ../../rtos_bsp/ps7_cortexa9_0/include/lwip/mem.h
 
 ../../rtos_bsp/ps7_cortexa9_0/include/lwip/inet.h:
 
@@ -106,3 +107,9 @@ src/echo.o src/echo.d: ../src/echo.c \
 ../../rtos_bsp/ps7_cortexa9_0/include/xil_printf.h:
 
 ../src/platform_gpio.h:
+
+../src/jamdetect.h:
+
+../src/prot_malloc.h:
+
+../../rtos_bsp/ps7_cortexa9_0/include/lwip/mem.h:

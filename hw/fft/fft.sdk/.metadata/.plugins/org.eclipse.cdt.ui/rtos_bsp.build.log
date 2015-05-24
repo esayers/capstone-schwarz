@@ -1,4 +1,4 @@
-13:45:19 **** Build of project rtos_bsp ****
+17:43:59 **** Auto Build of project rtos_bsp ****
 make -k all 
 Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
 make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
@@ -56,6 +56,7 @@ Compiling emacps
 Running Make libs in ps7_cortexa9_0/libsrc/freertos_zynq_v1_02_a/src
 make -C ps7_cortexa9_0/libsrc/freertos_zynq_v1_02_a/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 Compiling FreeRTOS
+arm-xilinx-eabi-ar: creating ../../../lib/libfreertos.a
 Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v2_2/src
 make -C ps7_cortexa9_0/libsrc/gpiops_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 Compiling gpiops
@@ -105,5 +106,5 @@ Running Make libs in ps7_cortexa9_0/libsrc/xilmfs_v2_0/src
 make -C ps7_cortexa9_0/libsrc/xilmfs_v2_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 Finished building libraries
 
-13:45:47 Build Finished (took 27s.931ms)
+17:44:21 Build Finished (took 22s.474ms)
 

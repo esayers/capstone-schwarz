@@ -1,0 +1,51 @@
+#include "jamdetect.h"
+
+void _fft(cplx buf[], cplx out[], int n, int step){
+    int i;
+    if (step < n) {
+        _fft(out, buf, n, step * 2);
+        _fft(out + step, buf + step, n, step * 2);
+
+        for (i = 0; i < n; i += 2 * step){
+                cplx t = cexpf(-I * PI * i / n) * out[i + step];
+                buf[i / 2]     = out[i] + t;
+                buf[(i + n)/2] = out[i] - t;
+        }
+    }
+}
+
+void fft(cplx buf[], int n){
+    int i;
+    cplx temp[n];
+    cplx out[n];
+    for (i = 0; i < n; i++) out[i] = buf[i];
+
+    _fft(buf, out, n, 1);
+
+        /* Flip the data across the y axis */
+    for (i = 0; i < n/2; i++) temp[i+n/2] = buf[i];
+    for (i = 0; i < n/2; i++) temp[i] = buf[i+n/2];
+    for (i = 0; i < n; i++) buf[i] = temp[i]/n;
+}
+
+win_peak get_peak(cplx buf[], int n)
+{
+    int i;
+    double max, cur;
+    win_peak peak;
+    int index;
+
+    for (i = 0; i < n; ++i)
+    {
+        cur = cabs(buf[i]);
+        if (cur > max)
+        {
+            max = cur;
+            index = i;
+        }
+    }
+    peak.value = (10 * log10(pow(max, 2))) + 30;
+    peax.index = index;
+
+    return peak;
+}

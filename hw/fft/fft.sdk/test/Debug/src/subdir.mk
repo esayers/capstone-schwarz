@@ -9,6 +9,7 @@ LD_SRCS += \
 C_SRCS += \
 ../src/dispatch.c \
 ../src/echo.c \
+../src/jamdetect.c \
 ../src/main.c \
 ../src/platform.c \
 ../src/platform_fs.c \
@@ -19,6 +20,7 @@ C_SRCS += \
 OBJS += \
 ./src/dispatch.o \
 ./src/echo.o \
+./src/jamdetect.o \
 ./src/main.o \
 ./src/platform.o \
 ./src/platform_fs.o \
@@ -29,6 +31,7 @@ OBJS += \
 C_DEPS += \
 ./src/dispatch.d \
 ./src/echo.d \
+./src/jamdetect.d \
 ./src/main.d \
 ./src/platform.d \
 ./src/platform_fs.d \

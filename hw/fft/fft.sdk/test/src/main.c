@@ -34,6 +34,7 @@
 #include "netif/xadapter.h"
 #include "lwip/dhcp.h"
 #include "config_apps.h"
+#include <math.h>
 #if __arm__
 #include "task.h"
 #include "portmacro.h"
@@ -60,6 +61,7 @@ void print_ip_settings(struct ip_addr *ip, struct ip_addr *mask, struct ip_addr 
 
 int main()
 {
+
     if (init_platform() < 0) {
         xil_printf("ERROR initializing platform.\r\n");
         return -1;

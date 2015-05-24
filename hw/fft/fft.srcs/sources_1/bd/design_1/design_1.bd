@@ -112,13 +112,13 @@
         <spirit:componentRef spirit:library="ip" spirit:name="axi_dma" spirit:vendor="xilinx.com" spirit:version="7.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_dma_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>xfft_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="xfft" spirit:vendor="xilinx.com" spirit:version="9.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_xfft_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="c_include_sg">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="c_m_axi_mm2s_data_width">64</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="c_include_mm2s_dre">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="c_mm2s_burst_size">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="c_include_s2mm">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="c_m_axi_s2mm_data_width">64</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="c_include_s2mm_dre">1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -133,6 +133,15 @@
         <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_xlconcat_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xfft_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xfft" spirit:vendor="xilinx.com" spirit:version="9.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_xfft_0_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="transform_length">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="implementation_options">pipelined_streaming_io</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -187,17 +196,16 @@
         <spirit:internalPortReference spirit:componentRef="axi_timer_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="s_axi_lite_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="m_axi_mm2s_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="m_axi_s2mm_aclk"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M02_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="s_axi_lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M03_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="xfft_0" spirit:portRef="aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="m_axi_sg_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="m_axi_mm2s_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="m_axi_s2mm_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>proc_sys_reset_0_peripheral_aresetn</spirit:name>
@@ -205,22 +213,17 @@
         <spirit:internalPortReference spirit:componentRef="axi_timer_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M02_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M03_ARESETN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>proc_sys_reset_0_interconnect_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="interconnect_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ARESETN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>xlconstant_0_dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="xlconstant_0" spirit:portRef="dout"/>
-        <spirit:internalPortReference spirit:componentRef="xfft_0" spirit:portRef="s_axis_config_tvalid"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlconcat_0_dout</spirit:name>
@@ -236,6 +239,11 @@
         <spirit:name>axi_dma_0_s2mm_introut</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="s2mm_introut"/>
         <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconstant_0_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="xlconstant_0" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="xfft_0" spirit:portRef="s_axis_config_tvalid"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
@@ -1742,12 +1750,6 @@
     <spirit:name>axi_dma</spirit:name>
     <spirit:version>7.1</spirit:version>
     <spirit:addressSpaces>
-      <spirit:addressSpace>
-        <spirit:name>Data_SG</spirit:name>
-        <spirit:range>4G</spirit:range>
-        <spirit:width>32</spirit:width>
-        <spirit:segments/>
-      </spirit:addressSpace>
       <spirit:addressSpace>
         <spirit:name>Data_MM2S</spirit:name>
         <spirit:range>4G</spirit:range>

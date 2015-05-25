@@ -51,6 +51,7 @@
 #include "xscugic.h"
 #include "xscutimer.h"
 #include "xemacps.h"		/* defines XEmacPs API */
+#include "platform_gpio.h"
 #endif
 
 void
@@ -112,6 +113,7 @@ init_platform()
 	if (platform_init_fs() < 0)
             return -1;
 #endif
+	platform_init_gpios();
     return 0;
 }
 

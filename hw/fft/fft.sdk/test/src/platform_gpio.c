@@ -18,57 +18,39 @@
 
 #include "platform_gpio.h"
 #include "xparameters.h"
+#include "xgpio.h"
 
-#if defined(XPAR_LEDS_8BITS_BASEADDR)
-#define LED_BASE XPAR_LEDS_8BITS_BASEADDR
-#elif defined(XPAR_LEDS_4BITS_BASEADDR)
-#define LED_BASE XPAR_LEDS_4BITS_BASEADDR
-#elif defined(XPAR_LEDS_6BIT_BASEADDR)
-#define LED_BASE XPAR_LEDS_6BIT_BASEADDR
-#else
-#define NO_GPIOS
-#endif
+static XGpio gpio_leds;
+static XGpio_Config *gpio_leds_config;
 
-#if defined(XPAR_DIP_SWITCHES_8BITS_BASEADDR)
-#define DIP_BASE XPAR_DIP_SWITCHES_8BITS_BASEADDR
-#elif defined(XPAR_DIP_SWITCHES_4BITS_BASEADDR)
-#define DIP_BASE XPAR_DIP_SWITCHES_4BITS_BASEADDR
-#elif defined(XPAR_PUSH_BUTTONS_POSITION_BASEADDR)
-#define DIP_BASE XPAR_PUSH_BUTTONS_POSITION_BASEADDR
-#endif
-
-void
-platform_init_gpios()
+void platform_init_gpios()
 {
-#ifndef NO_GPIOS
-    /* set led gpio data direction to output */
-    *(volatile unsigned int*)(LED_BASE + 4) = 0;
+	int status;
 
-    /* set dip switch gpio data direction to in */
-    *(volatile unsigned int*)(DIP_BASE + 4) = ~0;
+	gpio_leds_config = XGpio_LookupConfig(XPAR_AXI_GPIO_0_DEVICE_ID);
+	status = XGpio_CfgInitialize(&gpio_leds, gpio_leds_config, gpio_leds_config->BaseAddress);
 
-    /* initialize leds to OFF */
-    *(volatile int *)(LED_BASE) = 0;
-#endif
+	if (status != XST_SUCCESS)
+	{
+		xil_printf("Unable to initialize LEDs\n\r");
+	}
+
+	XGpio_SetDataDirection(&gpio_leds, 1, 0xff);
+	XGpio_DiscreteWrite(&gpio_leds, 1, 0x00);
+
 }
 
-int 
-toggle_leds()
+
+void set_led(int n)
 {
-    static int state = 0;
-#ifndef NO_GPIOS
-    state = ~state;
-    *(volatile int *)(LED_BASE) = state;
-#endif
-    return state;
+	if (n < 0 || n > 7) return;
+
+	XGpio_DiscreteSet(&gpio_leds, 1, (0x1 >> n));
 }
 
-unsigned int 
-get_switch_state()
+void clear_led(int n)
 {
-#ifdef NO_GPIOS
-    return 0x0;
-#else
-    return *(volatile unsigned int *)(DIP_BASE);
-#endif
+	if (n < 0 || n > 7) return;
+
+	XGpio_DiscreteClear(&gpio_leds, 1, (0x1 >> n));
 }

@@ -4,7 +4,7 @@ src/jamdetect.o src/jamdetect.d: ../src/jamdetect.c ../src/jamdetect.h \
  ../../rtos_bsp/ps7_cortexa9_0/include/lwipopts.h \
  ../../rtos_bsp/ps7_cortexa9_0/include/lwip/debug.h \
  ../../rtos_bsp/ps7_cortexa9_0/include/lwip/arch.h \
- ../../rtos_bsp/ps7_cortexa9_0/include/arch/cc.h
+ ../../rtos_bsp/ps7_cortexa9_0/include/arch/cc.h ../src/platform_gpio.h
 
 ../src/jamdetect.h:
 
@@ -21,3 +21,5 @@ src/jamdetect.o src/jamdetect.d: ../src/jamdetect.c ../src/jamdetect.h \
 ../../rtos_bsp/ps7_cortexa9_0/include/lwip/arch.h:
 
 ../../rtos_bsp/ps7_cortexa9_0/include/arch/cc.h:
+
+../src/platform_gpio.h:

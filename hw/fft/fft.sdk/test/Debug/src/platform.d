@@ -30,7 +30,8 @@ src/platform.o src/platform.d: ../src/platform.c ../src/platform.h \
  ../../rtos_bsp/ps7_cortexa9_0/include/xemacps.h \
  ../../rtos_bsp/ps7_cortexa9_0/include/xemacps_hw.h \
  ../../rtos_bsp/ps7_cortexa9_0/include/xemacps_bd.h \
- ../../rtos_bsp/ps7_cortexa9_0/include/xemacps_bdring.h
+ ../../rtos_bsp/ps7_cortexa9_0/include/xemacps_bdring.h \
+ ../src/platform_gpio.h
 
 ../src/platform.h:
 
@@ -99,3 +100,5 @@ src/platform.o src/platform.d: ../src/platform.c ../src/platform.h \
 ../../rtos_bsp/ps7_cortexa9_0/include/xemacps_bd.h:
 
 ../../rtos_bsp/ps7_cortexa9_0/include/xemacps_bdring.h:
+
+../src/platform_gpio.h:

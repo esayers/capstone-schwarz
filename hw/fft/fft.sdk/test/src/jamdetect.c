@@ -1,4 +1,5 @@
 #include "jamdetect.h"
+#include "platform_gpio.h"
 
 void _fft(cplx buf[], cplx out[], int n, int step){
     int i;
@@ -110,6 +111,7 @@ jam_info process_signal(win_peak peak, float sample_rate)
 		rv.valid = 1;
 		trigger = 0;
 		index = 0;
+		set_led(0);
 		prot_mem_free(freq_vs_time);
 	}
  return rv;

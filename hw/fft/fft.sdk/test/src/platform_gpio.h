@@ -20,7 +20,7 @@
 #define __PLATFORM_GPIO_H_
 
 void platform_init_gpios();
-int toggle_leds();
-unsigned int get_switch_state();
+void set_led(int);
+void clear_led(int);
 
 #endif

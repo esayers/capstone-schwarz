@@ -38,7 +38,6 @@
 #include "prot_malloc.h"
 
 #define HEAD_SIZE 3
-#define WIN_SIZE 64
 #define UNION_SIZE (WIN_SIZE * 2 + HEAD_SIZE)
 #define RECV_BUF_SIZE (UNION_SIZE * 4)
 

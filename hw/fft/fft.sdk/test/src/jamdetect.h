@@ -7,6 +7,7 @@
 
 #define PI 3.14159265358979323846
 #define THRESHOLD 0.7
+#define WIN_SIZE 64
 #define BUFFER_LEN 1024
 
 typedef float complex cplx;
@@ -14,6 +15,7 @@ typedef float complex cplx;
 typedef struct win_peak {
     double value;
     double freq;
+    int valid;
 } win_peak;
 
 typedef struct jam_info {

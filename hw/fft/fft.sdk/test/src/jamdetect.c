@@ -1,5 +1,7 @@
 #include "jamdetect.h"
 #include "platform_gpio.h"
+#include "FreeRTOS.h"
+#include "semphr.h"
 
 void _fft(cplx buf[], cplx out[], int n, int step){
     int i;
@@ -18,7 +20,6 @@ void _fft(cplx buf[], cplx out[], int n, int step){
 void fft(cplx buf[], int n){
     int i;
 
-    cplx *temp = prot_mem_malloc(sizeof(cplx) * n);
     cplx *out = prot_mem_malloc(sizeof(cplx) * n);
 
 
@@ -27,11 +28,10 @@ void fft(cplx buf[], int n){
     _fft(buf, out, n, 1);
 
         /* Flip the data across the y axis */
-    for (i = 0; i < n/2; i++) temp[i+n/2] = buf[i];
-    for (i = 0; i < n/2; i++) temp[i] = buf[i+n/2];
-    for (i = 0; i < n; i++) buf[i] = temp[i]/n;
+    for (i = 0; i < n/2; i++) out[i+n/2] = buf[i];
+    for (i = 0; i < n/2; i++) out[i] = buf[i+n/2];
+    for (i = 0; i < n; i++) buf[i] = out[i]/n;
 
-    prot_mem_free(temp);
     prot_mem_free(out);
 
 }
@@ -43,6 +43,9 @@ win_peak get_peak(cplx buf[], int nsamples, float sample_rate, float center_freq
     win_peak peak;
     int index;
 
+    max = THRESHOLD;
+
+    peak.valid = 0;
     for (i = 0; i < nsamples; ++i)
     {
         cur = cabs(buf[i]);
@@ -50,9 +53,12 @@ win_peak get_peak(cplx buf[], int nsamples, float sample_rate, float center_freq
         {
             max = cur;
             index = i;
+            peak.valid = 1;
         }
     }
-    peak.value = (10 * log10(pow(max, 2))) + 30;
+
+
+    peak.value = max;//(10 * log10(pow(max, 2))) + 30;
     peak.freq = index * (sample_rate / nsamples) - (sample_rate/2.0) + center_freq;
 
     return peak;
@@ -63,6 +69,7 @@ jam_info process_signal(win_peak peak, float sample_rate)
 {
 	static int trigger;
 	static int index;
+	static unsigned int time;
 	static cplx *freq_vs_time;
 	jam_info rv;
 	float min = INFINITY;
@@ -70,10 +77,23 @@ jam_info process_signal(win_peak peak, float sample_rate)
 	float max_freq = -INFINITY;
 	float freq;
 	int i, max_i;
-
-
+	static xSemaphoreHandle lock;
 
 	rv.valid = 0;
+
+	if (lock == NULL)
+	{
+		lock = xSemaphoreCreateMutex();
+	}
+
+	if (lock == NULL)
+		return rv;
+
+	if( xSemaphoreTake(lock,  10) == pdFALSE )
+		return rv;
+
+
+	++time;
 	/* Skip if not triggered and peak is below threshold */
 	if (!trigger && peak.value <= THRESHOLD)
 	{
@@ -84,7 +104,12 @@ jam_info process_signal(win_peak peak, float sample_rate)
 	if (index == 0)
 		freq_vs_time = prot_mem_malloc(sizeof(cplx) * BUFFER_LEN);
 
-	freq_vs_time[index++] = peak.freq + 0 * I;
+	if (peak.valid)
+		freq_vs_time[index] = peak.freq + 0 * I;
+	else
+		freq_vs_time[index] = freq_vs_time[index - 1];
+
+	++index;
 
 	if (index == BUFFER_LEN)
 	{
@@ -107,13 +132,15 @@ jam_info process_signal(win_peak peak, float sample_rate)
          }
 
 		rv.bandwidth = max - min;
-		rv.chirprate = (sample_rate / BUFFER_LEN) * (max_i - (BUFFER_LEN / 2.0));
+		rv.chirprate = (sample_rate / WIN_SIZE) * (2.0 * max_i - (BUFFER_LEN / 2.0) / (2.0 * BUFFER_LEN));
+		rv.time = time / (sample_rate / 64000);
 		rv.valid = 1;
 		trigger = 0;
 		index = 0;
-		set_led(0);
+		set_led(7);
 		prot_mem_free(freq_vs_time);
 	}
+
  return rv;
 }
 

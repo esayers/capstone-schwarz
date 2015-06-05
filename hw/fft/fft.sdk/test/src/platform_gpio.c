@@ -33,6 +33,7 @@ void platform_init_gpios()
 	if (status != XST_SUCCESS)
 	{
 		xil_printf("Unable to initialize LEDs\n\r");
+		return;
 	}
 
 	XGpio_SetDataDirection(&gpio_leds, 1, 0xff);

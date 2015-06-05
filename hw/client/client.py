@@ -9,6 +9,7 @@ import tempfile
 import struct
 import shutil
 import itertools
+import ctypes as ct
 
 # Error if there is the wrong number of arguments
 if len(sys.argv) != 2:
@@ -40,6 +41,8 @@ dataname = root.find('DataFilename').text
 clock = root.find('Clock').text
 cfreq = root.find('UserData').find('RohdeSchwarz').find('SpectrumAnalyzer').find('CenterFrequency').text
 
+header = struct.pack('!Iff', int(64), float(clock), float(cfreq))
+
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(('192.168.1.10', 7))
 
@@ -49,7 +52,8 @@ with open("tmp/" + dataname, "rb") as df:
     while len(fl) == 512:
         unpacked = struct.unpack('f'*128, fl)
         sendBytes = bytes()
-        sendBytes = sendBytes.join(itertools.chain(struct.pack('!iff', int(64), float(clock), float(cfreq)), (struct.pack('!f', val) for val in unpacked)))
+        body = (struct.pack('!f', val) for val in unpacked)
+        sendBytes = sendBytes.join(itertools.chain(header, body))
         s.send(sendBytes)
         fl = df.read(512)
 

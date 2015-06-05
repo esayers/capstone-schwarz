@@ -65,66 +65,52 @@ win_peak get_peak(cplx buf[], int nsamples, float sample_rate, float center_freq
 }
 
 
-jam_info process_signal(win_peak peak, float sample_rate)
+jam_info process_signal(win_peak peak, float sample_rate, time_info *time)
 {
-	static int trigger;
-	static int index;
-	static unsigned int time;
-	static cplx *freq_vs_time;
 	jam_info rv;
 	float min = INFINITY;
 	float max = -INFINITY;
 	float max_freq = -INFINITY;
 	float freq;
 	int i, max_i;
-	static xSemaphoreHandle lock;
 
 	rv.valid = 0;
 
-	if (lock == NULL)
-	{
-		lock = xSemaphoreCreateMutex();
-	}
-
-	if (lock == NULL)
-		return rv;
-
-	if( xSemaphoreTake(lock,  10) == pdFALSE )
-		return rv;
-
-
-	++time;
-	/* Skip if not triggered and peak is below threshold */
-	if (!trigger && peak.value <= THRESHOLD)
+	++time->time;
+	/* Skip if not time->triggered and peak is below threshold */
+	if (!time->trigger && peak.value <= THRESHOLD)
 	{
 		return rv;
 	}
 
-	trigger = 1;
-	if (index == 0)
-		freq_vs_time = prot_mem_malloc(sizeof(cplx) * BUFFER_LEN);
+	time->trigger = 1;
+	if (time->index == 0)
+	{
+		time->freq_vs_time = prot_mem_malloc(sizeof(cplx) * BUFFER_LEN);
+		clear_led(0);
+	}
 
 	if (peak.valid)
-		freq_vs_time[index] = peak.freq + 0 * I;
+		time->freq_vs_time[time->index] = peak.freq + 0 * I;
 	else
-		freq_vs_time[index] = freq_vs_time[index - 1];
+		time->freq_vs_time[time->index] = time->freq_vs_time[time->index - 1];
 
-	++index;
+	++(time->index);
 
-	if (index == BUFFER_LEN)
+	if (time->index == BUFFER_LEN)
 	{
 		for (i = 0; i < BUFFER_LEN; ++i)
 		{
-			freq = creal(freq_vs_time[i]);
+			freq = creal(time->freq_vs_time[i]);
 			min = fmin(min, freq);
 			max = fmax(max, freq);
 		}
 
-        fft(freq_vs_time, BUFFER_LEN);
-        freq_vs_time[BUFFER_LEN/2] = 0;         /* Delete the DC value of the result */
+        fft(time->freq_vs_time, BUFFER_LEN);
+        time->freq_vs_time[BUFFER_LEN/2] = 0;         /* Delete the DC value of the result */
 
         for (i = 0; i < BUFFER_LEN; i++){
-            freq = cabs(freq_vs_time[i]);
+            freq = cabs(time->freq_vs_time[i]);
             if (freq > max_freq){
             	max_freq = freq;
                 max_i = i;
@@ -133,12 +119,12 @@ jam_info process_signal(win_peak peak, float sample_rate)
 
 		rv.bandwidth = max - min;
 		rv.chirprate = (sample_rate / WIN_SIZE) * (2.0 * max_i - (BUFFER_LEN / 2.0) / (2.0 * BUFFER_LEN));
-		rv.time = time / (sample_rate / 64000);
+		rv.time = time->time / (sample_rate / 64000);
 		rv.valid = 1;
-		trigger = 0;
-		index = 0;
-		set_led(7);
-		prot_mem_free(freq_vs_time);
+		time->trigger = 0;
+		time->index = 0;
+		set_led(0);
+		prot_mem_free(time->freq_vs_time);
 	}
 
  return rv;

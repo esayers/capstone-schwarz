@@ -57,16 +57,21 @@ void process_echo_request(void *p)
 	int sd = (int)p;
 	int n, i, nsamples;
 	float sample_rate, center_freq;
-	static unsigned int count;
 	win_peak peak;
 	jam_info info;
+	time_info time;
 	cplx *buf = prot_mem_malloc(sizeof(cplx) * WIN_SIZE);
 
 	union Fpass{
-		int i[UNION_SIZE];
+		unsigned int i[UNION_SIZE];
 		float fl[UNION_SIZE];
 		char ch[RECV_BUF_SIZE];
 	} fpass;
+
+	time.trigger = 0;
+	time.time = 0;
+	time.index = 0;
+	time.freq_vs_time = NULL;
 
 	while (1) {
 		/* read a max of RECV_BUF_SIZE bytes from socket */
@@ -99,6 +104,8 @@ void process_echo_request(void *p)
 		sample_rate = fpass.fl[1];
 		center_freq = fpass.fl[2];
 
+		if (nsamples != 64)
+			continue;
 		/* Limit nsamples to window size */
 		if (nsamples > WIN_SIZE)
 			nsamples = WIN_SIZE;
@@ -108,11 +115,12 @@ void process_echo_request(void *p)
 		/* fft and get peak */
 		fft(buf, nsamples);
 		peak = get_peak(buf, nsamples, sample_rate, center_freq);
-		info = process_signal(peak, sample_rate);
+		info = process_signal(peak, sample_rate, &time);
 
 		if (info.valid)
 		{
-			printf("Time: %f Bandwidth: %f, Chirp Rate: %f\r\n", info.time, info.bandwidth, info.chirprate);
+			printf("Time: %.2f Bandwidth: %.2f, Chirp Rate: %.2f\r\n", info.time, info.bandwidth, info.chirprate);
+			info.valid = 0;
 		}
 
 

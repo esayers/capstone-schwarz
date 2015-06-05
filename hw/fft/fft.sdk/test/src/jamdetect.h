@@ -13,22 +13,29 @@
 typedef float complex cplx;
 
 typedef struct win_peak {
-    double value;
-    double freq;
+    float value;
+    float freq;
     int valid;
 } win_peak;
 
 typedef struct jam_info {
-	double time;
-	double bandwidth;
-	double chirprate;
+	float time;
+	float bandwidth;
+	float chirprate;
 	int valid;
 } jam_info;
+
+typedef struct time_info {
+	int trigger;
+	unsigned int time;
+	int index;
+	cplx * freq_vs_time;
+} time_info;
 
 void _fft(cplx *, cplx *, int, int);
 void fft(cplx *, int);
 win_peak get_peak(cplx *, int, float, float);
-jam_info process_signal(win_peak, float);
+jam_info process_signal(win_peak, float, time_info *);
 void uninter(float *, cplx *, int);
 
 #endif

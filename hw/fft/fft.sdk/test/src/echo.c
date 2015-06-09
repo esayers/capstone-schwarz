@@ -61,6 +61,10 @@ void process_echo_request(void *p)
 	jam_info info;
 	time_info time;
 	cplx *buf = prot_mem_malloc(sizeof(cplx) * WIN_SIZE);
+	float *bhwin = prot_mem_malloc(sizeof(float) * WIN_SIZE);
+	unsigned int run_time;
+
+	blackman_harris(bhwin, WIN_SIZE);
 
 	union Fpass{
 		unsigned int i[UNION_SIZE];
@@ -72,6 +76,7 @@ void process_echo_request(void *p)
 	time.time = 0;
 	time.index = 0;
 	time.freq_vs_time = NULL;
+	run_time = 0;
 
 	while (1) {
 		/* read a max of RECV_BUF_SIZE bytes from socket */
@@ -92,7 +97,7 @@ void process_echo_request(void *p)
 		/* break if client closed connection */
 		if (n <= 0)
 			break;
-
+		++run_time;
 		/* Rearrange from network order */
 		for (i = 0; i < UNION_SIZE; ++i)
 		{
@@ -112,6 +117,12 @@ void process_echo_request(void *p)
 
 		uninter(&fpass.fl[3], buf, nsamples);
 
+
+		for (i = 0; i < WIN_SIZE; ++i)
+		{
+			buf[i] *= bhwin[i];
+		}
+
 		/* fft and get peak */
 		fft(buf, nsamples);
 		peak = get_peak(buf, nsamples, sample_rate, center_freq);
@@ -119,7 +130,7 @@ void process_echo_request(void *p)
 
 		if (info.valid)
 		{
-			printf("Time: %.2f Bandwidth: %.2f, Chirp Rate: %.2f\r\n", info.time, info.bandwidth, info.chirprate);
+			printf("Time: %.2f Bandwidth: %.2f, Chirp Rate: %.2f\r\n", run_time / (sample_rate / 64000), info.bandwidth, info.chirprate);
 			info.valid = 0;
 		}
 
@@ -143,6 +154,8 @@ void process_echo_request(void *p)
 
 	}
 	/* close connection */
+	clear_led(7);
+	prot_mem_free(bhwin);
 	prot_mem_free(buf);
 	close(sd);
 #ifdef OS_IS_FREERTOS

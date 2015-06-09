@@ -120,7 +120,8 @@ jam_info process_signal(win_peak peak, float sample_rate, time_info *time)
 		rv.bandwidth = max - min;
 		rv.chirprate = (sample_rate / WIN_SIZE) * (2.0 * max_i - (BUFFER_LEN / 2.0) / (2.0 * BUFFER_LEN));
 		rv.time = time->time / (sample_rate / 64000);
-		rv.valid = 1;
+		if (rv.bandwidth != 0.0)
+			rv.valid = 1;
 		time->trigger = 0;
 		time->index = 0;
 		set_led(0);
@@ -152,4 +153,13 @@ void uninter(float * in, cplx * out, int n)
 
 			 out[i] = real + imag * I;
 		}
+}
+
+/* Blackman Harris windowing function declaration */
+void blackman_harris(float win[], int L){
+    int i;
+    int N = L - 1;
+    for(i = 0; i < N; i++){
+        win[i] = 0.35875 - 0.48829*cos(2*PI*i/N) + 0.14128*cos(4*PI*i/N) - 0.01168*cos(6*PI*i/N);
+    }
 }

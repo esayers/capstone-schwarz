@@ -37,5 +37,6 @@ void fft(cplx *, int);
 win_peak get_peak(cplx *, int, float, float);
 jam_info process_signal(win_peak, float, time_info *);
 void uninter(float *, cplx *, int);
+void blackman_harris(float *, int);
 
 #endif

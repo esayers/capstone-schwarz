@@ -1,5 +1,5 @@
 function test(varargin)
-%Author: Ben Wilson, Hanjae Noh
+%Author: Ben Wilson, Hanjae Noh, Devin Lorenzen
 %This code attenuates original signal and tells 
 %whether a jammer is detected or not, based on the threshold power -40 dBm.
 %
